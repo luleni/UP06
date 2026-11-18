@@ -1,0 +1,16 @@
+name: praktos-task4
+
+services:
+  app:
+    build: .
+    image: praktos-task4:1.0
+    ports:
+      - "127.0.0.1:8084:8000"
+    environment:
+      DATA_DIR: /data
+    volumes:
+      - tasks-data:/data
+
+volumes:
+  tasks-data:
+    name: praktos_task4_data
